@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^6.14.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "static": "^0.4.7"
+  },
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "프로젝트 작성중",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surprijin/nodes.git"
+  },
+  "author": "park hyunmin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/surprijin/nodes/issues"
+  },
+  "homepage": "https://github.com/surprijin/nodes#readme"
+}

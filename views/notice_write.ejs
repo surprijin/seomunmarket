@@ -1,0 +1,56 @@
+        <article class="w1440 noti_write_wrap">
+            <h2>공지사항</h2>
+            <% if(typeof errs !== 'undefined'){ %>
+                <% errs.forEach(() =>{ %>
+                    <h3><%=err.param%> : <%=err.msg%></h3>
+                <%})%>
+            <%}%>
+
+            <form method="POST" action="/store">
+                <table class="noti_write">
+                    <tbody class="noti_write_tbody">
+                        <tr>
+                            <td class="title" colspan="2">▶ 공지사항 등록하기</td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>제목</label></td>
+                            <td class="content"><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>작성자</label></td>
+                            <td class="content"><input type="text" name="NTuser"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>비밀번호</label></td>
+                            <td class="content"><input type="text" name="NTpw"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>내용</label></td>
+                            <td class="content">
+                                <textarea name="content"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>첨부파일1</label></td>
+                            <td class="savefile"><input type="button" value="파일첨부"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>첨부파일2</label></td>
+                            <td class="savefile"><input type="button" value="파일첨부"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>첨부파일3</label></td>
+                            <td class="savefile"><input type="button" value="파일첨부"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="save" colspan="2">
+                                <input type="submit" value="저장">
+                                <input type="button" value="취소" onclick = "location.href = 'notice'">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+        </article>

@@ -1,0 +1,207 @@
+.nav_wrap {
+    width: 100%;
+    background-image: url('../img/notice_main.png');
+    background-size: cover;
+}
+
+.w1440_notipage {
+    width: 1440px;
+    margin: auto;
+}
+
+.nav_wrap h1 {
+    width: 100%;
+    padding-top: 8.02%;
+    padding-bottom: 8.02%;
+    text-align: center;
+    font-size: 58px;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav_wrap nav>ul>li {
+    width: 16.66%;
+    line-height: 80px;
+    background-color: #ECAC13;
+}
+
+.nav_wrap nav>ul>li>a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    letter-spacing: -2px;
+}
+
+.nav_wrap .notice_active {
+    background-color: #fff;
+}
+
+.nav_wrap .noticetxt_active {
+    color: #4D3494;
+}
+
+/************************게시판 영역 시작************************/
+
+.view_notice {
+    margin: 150px auto;
+}
+
+.btn_share {
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn_share>a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    display: block;
+    background-image: url('../img/btn_share.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.notice_view {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.view_thead th {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    border-top: 2px solid #555;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.view_tbody {
+    width: 100%;
+}
+
+.view_tbody>tr {
+    width: 100%;
+}
+
+.view_tbody td {
+    padding: 15px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.noti_tit_view {
+    text-align: center;
+    font-weight: 600;
+}
+
+.click {
+    display: block;
+    color: #555;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.view_file a {
+    display: block;
+    padding-left: 26px;
+    position: relative;
+}
+
+.view_file a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/icon_file.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.click:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.list {
+    text-align: center;
+}
+
+.list>input {
+    margin-top: 50px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1440px) {
+
+    .w1440_notipage {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;}
+
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .nav_wrap {
+        margin-bottom: 150px;}
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .nav_wrap h1 {
+        font-size: 33px;}
+
+    .nav_wrap nav>ul>li {
+        line-height: 50px;
+    }
+
+    .nav_wrap nav>ul>li>a {
+        font-size: 16px;
+    }
+
+    .nav_wrap {
+        margin-bottom: 100px;}
+
+        .view_notice {
+            margin: 100px auto;}
+
+
+        }
+
+@media only screen and (max-width: 670px) {
+
+    .view_notice {
+        margin: 50px auto;}
+
+    .nav_wrap>article {
+        padding: 0;
+    }
+
+    .nav_wrap nav>ul>li {
+        width: 20%;
+    }
+}

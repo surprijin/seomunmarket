@@ -1,0 +1,100 @@
+.noti_write_wrap>h2 {
+    font-size: 58px;
+    color: #4D3494;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.noti_write_wrap {
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.noti_write {
+    width: calc(100% - 60px);
+    margin: auto;
+    border-top: 3px double #E0E0E0;
+}
+
+.noti_write_tbody {
+    word-wrap: 100%;
+    border-top: 4px solid #E0E0E0;
+    border-bottom: 4px solid #E0E0E0;
+}
+
+.noti_write_tbody .title {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #F5F5F5;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-bottom: 4px double #E0E0E0;
+}
+
+.label {
+    width: 10%;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    font-weight: bold;
+    color: #555555;
+}
+
+.content {
+    width: 83.33%;
+    padding: 10px 0;
+}
+
+.savefile {
+    padding: 10px 0;
+}
+
+.content>input {
+    width: 95%;
+}
+
+textarea {
+    width: 95%;
+    height: 500px;
+}
+
+.save {
+    text-align: center;
+}
+
+.save>input {
+    margin-top: 20px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1440px) {
+
+    .w1440 {
+        width: 100%;}
+
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .label {
+        width: 20%;}
+
+    .content {
+        width: 80%;}
+}
+
+@media only screen and (max-width: 670px) {
+
+    .label {
+        width: 25%;
+        font-size: 13px;}
+
+    .content {
+        width: 75%;}
+}

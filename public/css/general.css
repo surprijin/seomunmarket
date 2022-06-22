@@ -1,0 +1,107 @@
+
+
+.general_title {
+    width: 100%;
+    background-image: url('../img/login_img.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.w1440 {
+    width: 1440px;
+    margin: auto;
+}
+
+.general_title h1 {
+    width: 100%;
+    padding-top: 8.02%;
+    padding-bottom: 8.02%;
+    text-align: center;
+    font-size: 58px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.general_bg {
+    padding: 100px 0 100px;
+    background-color: #f5f5f5;
+}
+
+.title_wrap {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title_wrap>h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.general_wrap {
+    width: 70%;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item_title {
+    padding: 10px 0;
+}
+
+.item input {
+    padding: 10px 0;
+    border: none;
+}
+
+.id_wrap {
+    display: flex;
+}
+
+.id_space {
+    width: 80%;
+}
+
+.id_btn {
+    width: 20%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #C4C4C4;
+}
+
+.join_btn {
+    display: block;
+    padding: 10px 30px;
+    background-color: #4D3494;
+    color: #fff;
+    border: none;
+    margin: 50px auto 0;
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .w1440 {
+        width: 100%;}
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .join_title h1 {
+        font-size: 33px;}
+
+    .title_wrap>h2 {
+        font-size: 23px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+}
