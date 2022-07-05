@@ -25,18 +25,26 @@ header {
     right:  0;
 }
 
+#login {
+    margin: 0;
+}
+
 .t_nav>ul>li {
-    margin-right: 20px;
+    color: #fff;
 }
 
 .t_nav>ul>li:hover a {
     text-decoration: underline;
 }
 
+#user, #logout {
+    margin-right: 20px;
+}
+
 .t_nav>ul>li>a {
     font-size: 15px;
-    color: #9185AE;
-    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
 }
 
 .b_nav {

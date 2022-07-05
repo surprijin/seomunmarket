@@ -63,13 +63,18 @@
 }
 
 .login_btn {
-    width: 20%;
+    width: 183px;
+    height: 45px;
     padding: 10px 0;
     box-sizing: border-box;
     margin-top: 30px;
     background-color: #4D3494;
     border: none;
     color: #fff;
+}
+
+.kakaologin {
+    margin-top: 15px;
 }
 
 @media only screen and (max-width: 1440px) {
