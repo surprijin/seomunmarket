@@ -7,6 +7,7 @@
     "express-ejs-layouts": "^2.5.1",
     "express-validator": "^6.14.1",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
     "static": "^0.4.7"
   },
@@ -15,7 +16,7 @@
   "description": "프로젝트 작성중",
   "main": "server.js",
   "scripts": {
-    "start" : "node ./bin/www.js",
+    "start": "node ./bin/www.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

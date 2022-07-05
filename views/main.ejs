@@ -104,42 +104,20 @@
         </section>
         <section>
             <article class="w1440 banner_wrap">
-                <div class="notice_wrap">
+                <form class="notice_wrap">
                     <div class="main_notice_title">
                         <h3>공지사항</h3>
                         <a href="notice">+</a>
                     </div>
                     <table class="main_notice">
+                        <% rows.forEach((row, index) => { %>
                         <tr>
-                            <td class="title"><a class="active_noti" href="notice_page">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a class="active_noti" href="notice_page">2022-03-25</a></td>
+                            <td onclick="javascript:location.href='/notice_page?id=<%=row.id%>'"><%=row.title%></td>
+                            <td class="date"><%=row.NTdate%></td>
                         </tr>
-                        <tr>
-                            <td class="title"><a href="">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a href="">2022-03-25</a></td>
-                        </tr>
-                        <tr>
-                            <td class="title"><a href="">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a href="">2022-03-25</a></td>
-                        </tr>
-                        <tr class="w670_none">
-                            <td class="title"><a href="">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a href="">2022-03-25</a></td>
-                        </tr>
-                        <tr class="w670_none">
-                            <td class="title"><a href="">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a href="">2022-03-25</a></td>
-                        </tr>
-                        <tr class="w1000_none">
-                            <td class="title"><a href="">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a href="">2022-03-25</a></td>
-                        </tr>
-                        <tr class="w1240_none">
-                            <td class="title"><a href="">서문·칠성야시장 매대운영자 모집공고</a></td>
-                            <td class="date"><a href="">2022-03-25</a></td>
-                        </tr>
+                        <% }) %>
                     </table>
-                </div>
+                </form>
                 <div class="seller_wrap">
                     <div><a class="seller1" href=""></a></div>
                     <div><a class="seller2" href=""></a></div>

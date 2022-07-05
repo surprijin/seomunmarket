@@ -8,7 +8,9 @@ router.use(expressLayouts);
 
 //route, routing 
 router.get('/', (req, res) => {
-    res.render('main');
+    db.getMainMemos((rows) => {
+        res.render('main',{ rows : rows });
+    });
     //서문시장야시장의 메인페이지를 지정 하세요
 });
 
@@ -94,7 +96,7 @@ router.get('/noticeUpdate',(req,res) => {
     });
 });
 
-router.post('/noticeUpdate',check('title').isLength({min: 1, max: 300}),
+router.post('/noticeUpdate',check('content').isLength({min: 1, max: 300}),
     (req,res) => {
         let errs = validationResult(req);
 
@@ -123,7 +125,6 @@ router.post('/noticeUpdate',check('title').isLength({min: 1, max: 300}),
             res.redirect('/notice');
         });
     })
-
 
     
 module.exports = router;

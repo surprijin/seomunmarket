@@ -1,3 +1,4 @@
+    <form>  
         <section class="notice_title">
             <article class="w1440_notice">
                 <h1>참여마당</h1>
@@ -23,10 +24,8 @@
                         </select>
                     </div>
                     <div class="search_bar">
-                        <input type="text" placeholder="검색어를 입력하세요.">
-                        <span>
-                            <a href="#"></a>
-                        </span>
+                        <input id="search" type="text" placeholder="검색어를 입력하세요.">
+                        <input class="search_btn" type="button" onclick="filter()">
                     </div>
                 </div>
             </article>
@@ -41,43 +40,25 @@
                             <td class="file">첨부파일</td>
                         </tr>
                     </thead>
-                    <% rows.forEach((row, index) => { %>
                     <tbody>
-                        <tr>
+                        <% rows.forEach((row, index) => { %>
+                        <tr class="listInner paging">
                             <td class="notice_tit" onclick="javascript:location.href='/notice_page?id=<%=row.id%>'"><%=row.title%></td>
                             <td class="date"><%=row.NTdate%></td>
                             <td class="file">
                             </td>
                         </tr>
+                        <% }) %>
                     </tbody>
-                    <% }) %>
                 </table>
             </article>
         </section>
         <section class="pageno_wrap w1440_notice">
-            <article>
-                <div class="pre_page">
-                    <a class="pre" href="#">&lt;&lt;</a>
-                    <a class="pre" href="#">&lt;</a>
-                </div>
-                <div class="page">
-                    <a class="active_num" href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a class="none_num" href="#">6</a>
-                    <a class="none_num" href="#">7</a>
-                    <a class="none_num" href="#">8</a>
-                    <a class="none_num" href="#">9</a>
-                    <a class="none_num" href="#">10</a>
-                </div>
-                <div class="next_page">
-                    <a class="next" href="#">&gt;</a>
-                    <a class="next" href="#">&gt;&gt;</a>
-                </div>
-            </article>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination pagination-seperated notice_num "></ul>
+            </nav>
             <div class="write_btn">
                 <button type="button" onclick="javascript:location.href='/notice_write'">글쓰기</button>
             </div>
         </section>
+    </form>

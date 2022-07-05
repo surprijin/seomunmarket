@@ -79,16 +79,12 @@ header {
     width: 50%;
 }
 
-.b_nav_wrap>ul a {
+.tabMenu {
     font-size: 20px;
     font-weight: bold;
     color: #fff;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.b_nav_wrap>ul .active_list {
-    color: #FFF100;
 }
 
 /**********************footer************************/

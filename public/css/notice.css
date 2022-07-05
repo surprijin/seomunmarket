@@ -98,7 +98,7 @@ nav>ul {
     justify-content: space-between;
 }
 
-.search_bar>input {
+.search_bar>#search {
     width: 100%;
     background: none;
     border: none;
@@ -107,7 +107,9 @@ nav>ul {
     color: #3B3D40;
     }
 
-.search_bar>span>a {
+
+ 
+.search_btn {
     display: block;
     width: 60px;
     height: 60px;
@@ -115,7 +117,11 @@ nav>ul {
     background-image: url('../img/search_icon.png');
     background-size: 30px 30px;
     background-repeat: no-repeat;
-    background-position: center center;}
+    background-position: center center;
+    outline: none;
+    border: none;
+    cursor: pointer;}
+
     
 
 
@@ -130,7 +136,7 @@ nav>ul {
 }
 
 .notice_list tr>td {
-    padding: 20px 0;
+    padding: 20px ;
     border: 1px solid #E0E0E0;
 }
 
@@ -140,7 +146,6 @@ nav>ul {
     font-weight: bold;
     color: #555555;
 }
-
 
 
 .notice_tit {
@@ -153,11 +158,7 @@ nav>ul {
     cursor: pointer;
 }
 
-.notice_list>tbody>tr>.notice_tit {
-    padding-left: 20px;
-}
-
-.notice_list .date {
+.date {
     width: 20%;
     text-align: center;
     white-space: nowrap;
@@ -180,6 +181,7 @@ tfoot, tfoot a {
 
 }
 
+/*
 .pageno_wrap>article {
     width: 66.66%;
     margin: auto;
@@ -225,6 +227,19 @@ tfoot, tfoot a {
 .page>.active_num {
     background-color: #4D3494;
     color: #fff;
+}
+*/
+
+.page-item {
+    width: 36px;
+    height: 36px;
+    background-color: #F5F5F5;
+    margin: 0 5px;
+}
+
+.page-link {
+    color: #3B3D40;
+    line-height: 36px;
 }
 
 .write_btn {
@@ -315,7 +330,7 @@ tfoot, tfoot a {
     .notice_list{
         table-layout: fixed;}
 
-    .search_bar>span>a {
+    .search_btn {
         display: block;
         width: 40px;
         height: 40px;}

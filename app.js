@@ -3,6 +3,13 @@ const app = express();
 var expressLayouts = require('express-ejs-layouts');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// var path = require('path');
+const http = require('https');
+
+setInterval(function(){
+    http.get("https://seomunmarket.herokuapp.com/")
+},600000)
+
 
 const routers = require('./routes/route.js');
 

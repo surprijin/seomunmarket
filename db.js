@@ -17,6 +17,14 @@ function getAllMemos(callback) {
     })
 }
 
+function getMainMemos(callback) {
+    connection.query('select * from notice order by id DESC LIMIT 6', 
+    (err, rows, fields) =>{
+        if(err) throw err;
+        callback(rows);
+    })
+}
+
 function insertMemo(title,NTuser,NTpw,NTdate,content, callback){
     connection.query(`INSERT INTO notice(title, NTuser, NTpw, NTdate, content) VALUES
     ('${title}','${NTuser}','${NTpw}', NOW(),'${content}')`,(err, result) => {
@@ -55,11 +63,13 @@ function deleteMemoById(id, callback){
     })
 }
 
+
 module.exports = {
     getAllMemos,
     insertMemo,
     getMemoById,
     updateMemoById,
     deleteMemoById,
-    getpageByid
+    getpageByid,
+    getMainMemos
   }

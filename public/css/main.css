@@ -187,7 +187,7 @@
     width: calc(33.33% - 20px);
 }
 
-.show_nav>li:hover .show_txt {
+.show_nav>li>a:hover {
     color: #4D3494;
 }
 
@@ -368,6 +368,11 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    transition: all ease 1s;
+}
+
+.main_notice_title>a:hover {
+    transform: rotate( 180deg );
 }
 
 .main_notice {
@@ -382,15 +387,14 @@
 .main_notice tr>td {
     padding: 8px 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
-.main_notice tr>td>a {
-    color: #555;
-}
 
-.main_notice tr>td>.active_noti {
+.main_notice tr:hover {
     color: #4D3494;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .main_notice tr>.title {
@@ -400,9 +404,6 @@
     text-overflow: ellipsis;
 }
 
-.main_notice tr>.title:hover {
-    text-decoration: underline;
-}
 
 .main_notice tr>.date {
     text-align: right;
