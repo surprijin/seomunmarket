@@ -63,17 +63,22 @@ nav>ul {
     background-color: #ECAC13;
 }
 
-.introdue_title nav>ul>.intro_active {
-    background-color: #fff;
-}
-
 .introdue_title nav>ul>li>a {
+    width: 100%;
+    height: 100%;
     font-size: 20px;
     color: #fff;
     font-weight: bold;
+    display: block;
+    cursor: pointer;
+}
+
+.introdue_title nav>ul>li>a:hover {
+    color: #4D3494;
 }
 
 .introdue_title nav>ul>li>.introtxt_active {
+    background-color: #fff;
     color: #4D3494;
 }
 

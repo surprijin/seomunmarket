@@ -126,5 +126,17 @@ router.post('/noticeUpdate',check('content').isLength({min: 1, max: 300}),
         });
     })
 
-    
+    //검색 기능 
+
+    router.get("/search", (req, res, next) => {
+        let keyword = req.query.search_txt;
+
+        db.countAll((count) => {
+            db.searchMemo(keyword, (rows) => {
+                res.render('notice', {rows:rows, count:count, keyword:keyword});
+                console.log(rows);
+            });
+        });
+    })
+
 module.exports = router;

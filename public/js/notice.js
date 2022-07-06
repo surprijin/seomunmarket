@@ -1,27 +1,8 @@
-// 검색 기능 구현
-
-
-function filter() {
-  let search = document.getElementById("search").value.toLowerCase();
-  let listInner = document.getElementsByClassName("listInner");
-
-  for (let i = 0; i < listInner.length; i++) {
-    title = listInner[i].getElementsByClassName("notice_tit");
-    date = listInner[i].getElementsByClassName("date");
-    if (title[0].innerHTML.toLowerCase().indexOf(search) != -1 ||
-      date[0].innerHTML.toLowerCase().indexOf(search) != -1
-    ){
-      listInner[i].style.display = "content"
-    } else {
-      listInner[i].style.display = "none"
-    }
-  }
-}
 
 // 페이지네이션 구현
 
 function pagination() {
-  var req_num_row = 10; //화면에 표시할 목록 개수
+  var req_num_row = 15; //화면에 표시할 목록 개수
   var $tr = jQuery(".paging"); // paging 대상 class 명
   var total_num_row = $tr.length;
   var num_pages = 0;

@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 /**********************header************************/
 
@@ -95,6 +98,14 @@ header {
     box-sizing: border-box;
 }
 
+    .tabMenu:hover {
+        color : #FFF100;
+    }
+
+.header_tab>li>.active {
+    color : #FFF100;
+}
+
 /**********************footer************************/
 
 footer {
@@ -133,6 +144,32 @@ footer {
     color: #F5F5F5;
     padding: 10px 0;
 }
+
+/*******************top 버튼***************/
+
+#topBtnWrap {
+    position: fixed;
+    right: 15px;
+    bottom: 5%;
+    display: none;
+  }
+
+#topBtnWrap>.top_btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 12px;
+    background-color: #ECAC13;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+
+#topBtnWrap>.top_btn:hover{
+    background-color: #4D3494;
+  }
 
 
 @media only screen and (max-width: 1440px) {

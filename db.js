@@ -63,6 +63,24 @@ function deleteMemoById(id, callback){
     })
 }
 
+/************************** 공지사항 검색 ****************************/
+
+function countAll(callback){
+    connection.query('SELECT COUNT(*) FROM notice',(err, result) => {
+        let count = Object.values(result[0])[0];
+        if (err) throw err;
+        callback(count);
+    });
+}
+
+function searchMemo(keyword, callback){
+    console.log(keyword);
+    connection.query(`SELECT * FROM (SELECT *, @rownum:=@rownum+1 AS RNUM FROM notice, (SELECT @rownum :=0 as R)NUM)SUB WHERE title LIKE '%${keyword}%' ORDER BY id DESC`, (err, rows, fields) => {
+        if (err) throw err;
+        callback(rows);
+});
+}
+
 
 module.exports = {
     getAllMemos,
@@ -71,5 +89,7 @@ module.exports = {
     updateMemoById,
     deleteMemoById,
     getpageByid,
-    getMainMemos
+    getMainMemos,
+    countAll,
+    searchMemo
   }

@@ -1,4 +1,4 @@
-    <form>  
+
         <section class="notice_title">
             <article class="w1440_notice">
                 <h1>참여마당</h1>
@@ -13,23 +13,24 @@
                 </nav>
             </article>
         </section>
+        <form method="GET" id="search" action="/search">
         <section class="search_wrap w1440_notice">
             <article>
                 <div class="search_bg">
                     <div class="dropbox">
                         <select required name="content" id="">
                             <option value="title">제목</option>
-                            <option value="content">내용</option>
-                            <option value="title+content">제목+내용</option>
                         </select>
                     </div>
                     <div class="search_bar">
-                        <input id="search" type="text" placeholder="검색어를 입력하세요.">
-                        <input class="search_btn" type="button" onclick="filter()">
+                        <input type="text" name="search_txt" id="searchTxt" placeholder="검색어를 입력하세요.">
+                        <input type="submit" class="search_btn" value="">
                     </div>
                 </div>
             </article>
         </section>
+        </form>
+        <form>
         <section class="board_wrap w1440_notice">
             <article>
                 <table class="notice_list">
@@ -42,7 +43,7 @@
                     </thead>
                     <tbody>
                         <% rows.forEach((row, index) => { %>
-                        <tr class="listInner paging">
+                        <tr class="paging">
                             <td class="notice_tit" onclick="javascript:location.href='/notice_page?id=<%=row.id%>'"><%=row.title%></td>
                             <td class="date"><%=row.NTdate%></td>
                             <td class="file">
@@ -53,12 +54,13 @@
                 </table>
             </article>
         </section>
+        </form>
         <section class="pageno_wrap w1440_notice">
             <nav aria-label="Page navigation example">
                 <ul class="pagination pagination-seperated notice_num "></ul>
             </nav>
             <div class="write_btn">
                 <button type="button" onclick="javascript:location.href='/notice_write'">글쓰기</button>
+                <button type="button" onclick="javascript:location.href='/notice'">목록</button>
             </div>
         </section>
-    </form>

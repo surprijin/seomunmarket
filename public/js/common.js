@@ -53,3 +53,36 @@ function kakaoLogout(){
       }
 
 }
+
+//top 버튼 
+
+var locationSidebar = document.getElementById('topBtnWrap');
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    locationSidebar.style.display = "block";
+  } else {
+    locationSidebar.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//nav 영역
+
+
+var url = window.location
+
+$('.header_tab .tabMenu').filter(function() {
+	 return this.href == url;
+}).addClass('active');

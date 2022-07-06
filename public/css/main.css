@@ -138,6 +138,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 1s;
 }
 
 .f_txt {
@@ -160,7 +161,7 @@
 }
 
 .food_wrap a:hover .f_img::after {
-    display: none;
+    background-color: transparent;
 }
 
 /**********************즐길거리************************/
@@ -187,30 +188,32 @@
     width: calc(33.33% - 20px);
 }
 
-.show_nav>li>a:hover {
-    color: #4D3494;
-}
 
 .show_nav>li>a {
     display: block;
     position: relative;
     width: 100%;
-    padding-top: 55.55%;
+}
+
+
+.show_txt {
+    text-align: center;
+    color: #fff;
+    padding: 30px 10px;
     background-color: #ECAC13;
 }
 
-.show_txt {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
-    text-align: center;
-    color: #fff;
+.showcolor {
+    transition: color 1s;
 }
 
 
 .show_txt>p>span {
     display: block;
+}
+
+.show_txt:hover .showcolor{
+    color: #4D3494;    
 }
 
 /**********************SNS***********************/
@@ -229,29 +232,42 @@
     background-color: #fff;
     border-radius: 50px;
     margin: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .sns_nav>li {
     width: 33.33%;
-    padding: 15px 0;
+    height: 50px;
     text-align: center;
 }
 
-.sns_nav>li>a {
-    display: block;
-    width: 100%;
-}
-
-.sns_nav>li>a>span {
+.sns_nav>li>button {
     font-size: 18px;
     color: #9185AE;
-    font-weight: bold;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: transparent;
     padding-left: 40px;
     box-sizing: border-box;
-    background-position: left;
-    background-size: 30px 30px;
+    background-size: 24px 24px;
     background-repeat: no-repeat;
+    background-position: 0 center;
+    line-height: 50px;
+    cursor: pointer;
 }
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4D3494;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50px;
+}
+
 
 .facebook {
     background-image: url('../img/facebook_logo.png');
@@ -265,12 +281,7 @@
     background-image: url('../img/instagram_logo.png');
 }
 
-.sns_nav>.active_sns {
-    border-radius: 50px;
-    background-color: #4D3494;
-}
-
-.sns_nav>.active_sns span {
+.sns_nav>.on>button {
     color: #fff;
 }
 
@@ -285,7 +296,6 @@
     overflow: hidden;
 }
 
-
 .sns_thum>li>a {
     display: block;
     width: 100%;
@@ -294,40 +304,75 @@
     transition: transform 0.3s;
 }
 
-.sns_thum>li>a:hover {
-    transform: scale(1.05)
-}
 
-.sns_img1 {
+.nb_img1 {
     background-image: url('../img/blog1.jpg');
 }
 
-.sns_img2 {
+.nb_img2 {
     background-image: url('../img/blog2.jpg');
 }
 
-.sns_img3 {
+.nb_img3 {
     background-image: url('../img/blog3.jpg');
 }
 
-.sns_img4 {
+.nb_img4 {
     background-image: url('../img/blog4.jpg');
 }
 
+.fb_img1 {
+    background-image: url('../img/fb_img1.png');
+}
+
+.fb_img2 {
+    background-image: url('../img/fb_img2.jpg');
+}
+
+.fb_img3 {
+    background-image: url('../img/fb_img3.jpg');
+}
+
+.fb_img4 {
+    background-image: url('../img/fb_img4.png');
+}
+
+.ig_img1 {
+    background-image: url('../img/ig_img1.jpg');
+}
+.ig_img2 {
+    background-image: url('../img/ig_img2.jpg');
+}
+.ig_img3 {
+    background-image: url('../img/ig_img3.jpg');
+}
+.ig_img4 {
+    background-image: url('../img/ig_img4.jpg');
+}
+
+.tab_content {
+    display: none;
+    width: 100%;
+}
+
+.tab_contents>.on {
+    display: block;
+}
+
+
 .sns_btn {
-    width: 16.66%;
-    padding: 10px 0;
-    box-sizing: border-box;
-    background-color: #4D3494;
-    margin: auto;
+    text-align: center;
+    transition:  opacity 0.5s;
+}
+
+.sns_btn:hover {
+    opacity: 0.8;
 }
 
 .sns_btn>a {
-    display: block;
-    width: 100%;
     color: #fff;
-    font-weight: bold;
-    text-align: center;
+    padding: 10px;
+    background-color: #4D3494;
 }
 
 /**********************공지사항************************/
@@ -350,7 +395,7 @@
 .main_notice_title {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .main_notice_title>h3 {
@@ -382,31 +427,31 @@
 
 .main_notice tr {
     width: 100%;
-}
-
-.main_notice tr>td {
-    padding: 8px 0;
-    box-sizing: border-box;
     cursor: pointer;
 }
 
+.mNotiTitle {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.mNotiDate {
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
 
 .main_notice tr:hover {
     color: #4D3494;
     font-weight: bold;
     text-decoration: underline;
-}
-
-.main_notice tr>.title {
-    width: 80%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-
-.main_notice tr>.date {
-    text-align: right;
 }
 
 .seller_wrap {
@@ -441,6 +486,7 @@
 .link_wrap>ul {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .link_wrap>ul>li {
@@ -467,6 +513,7 @@
     background-image: url('../img/junggibu_logo.png');
 }
 
+
 /**********************미디어쿼리************************/
 
 @media only screen and (max-width: 1240px) {
@@ -485,9 +532,6 @@
         display: none;
     }
 
-    .main_notice tr>td {
-        padding: 7px 0;}
-    
     /*max-width: 1240px*/
 }
 
@@ -523,13 +567,7 @@
         .w1000_none {
             display: none;}
 
-            .main_notice tr>.title {
-                width: 70%;
-            }
             
-        .main_notice tr>td {
-            padding: 6px 0;}
-
             .link_wrap {
                 margin: 0 auto 50px;
             }
@@ -561,14 +599,7 @@
             font-size: 14px;
         }
 
-        .show_nav>li>a {
-            padding-top: 34.88%;}
-
-        .sns_nav>li {
-            padding: 10px 0;}
-            
-
-        .sns_nav>li>a>span {
+        .sns_nav>li>button {
             font-size: 16px;
             padding-left: 30px;
             background-size: 20px 20px;
@@ -636,7 +667,7 @@
         .sns_nav {
             width: 83.33%;}
 
-            .sns_nav>li>a>span {
+            .sns_nav>li>button {
                 font-size: 14px;
                 background-image: none;
                 padding: 0;
@@ -660,22 +691,21 @@
                 display: none;}
             
             
-                .banner_wrap {
-                    padding: 50px 0 ;}
+            .banner_wrap {
+                padding: 50px 0 ;}
                 
-            .main_notice tr>td {
-                padding: 15px 0;}
-
-
-                .seller_wrap {
-                    width: 83.33%;
-                    display: flex;
-                    flex-direction: column;
-                    margin: auto;}
+            .seller_wrap {
+                width: 83.33%;
+                display: flex;
+                flex-direction: column;
+                margin: auto;}
         
-                .seller_wrap>div {
-                    width: 100%;}    
+            .seller_wrap>div {
+                width: 100%;}    
 
 
+            .sns_btn>a {
+                font-size: 14px;
+             }
     /*max-width: 670px*/
 }
