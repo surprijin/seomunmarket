@@ -9,6 +9,7 @@ const connection = mysql.createConnection({
     dateStrings :'date' //날짜 시간 출력
   });
 
+
 function getAllMemos(callback) {
     connection.query('select * from notice order by id DESC', 
     (err, rows, fields) =>{
