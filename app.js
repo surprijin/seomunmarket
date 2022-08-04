@@ -7,7 +7,7 @@ var path = require('path');
 const http = require('https');
 
 setInterval(function(){
-    http.get("https://seomunmarket.herokuapp.com/")
+    http.get("https://seomunfinal.herokuapp.com/")
 },600000)
 
 
