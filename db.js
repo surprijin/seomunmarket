@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host : 'us-cdbr-east-06.cleardb.net',
     user : 'be07ab9fb79386', //ID
     password : '3d555bdf', //비밀번호
@@ -9,25 +9,25 @@ const connection = mysql.createConnection({
     dateStrings :'date' //날짜 시간 출력
   });
 
-  function handleDisconnect() {
-    connection.connect(function(err) {            
-      if(err) {                            
-        console.log('error when connecting to db:', err);
-        setTimeout(handleDisconnect, 2000); 
-      }                                   
-    });                                 
+//   function handleDisconnect() {
+//     connection.connect(function(err) {            
+//       if(err) {                            
+//         console.log('error when connecting to db:', err);
+//         setTimeout(handleDisconnect, 2000); 
+//       }                                   
+//     });                                 
                                            
-    connection.on('error', function(err) {
-      console.log('db error', err);
-      if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
-        return handleDisconnect();                      
-      } else {                                    
-        throw err;                              
-      }
-    });
-  }
+//     connection.on('error', function(err) {
+//       console.log('db error', err);
+//       if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
+//         return handleDisconnect();                      
+//       } else {                                    
+//         throw err;                              
+//       }
+//     });
+//   }
   
-  handleDisconnect();
+//   handleDisconnect();
 
 
 function getAllMemos(callback) {
